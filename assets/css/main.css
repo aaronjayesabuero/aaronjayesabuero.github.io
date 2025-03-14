@@ -25,7 +25,6 @@
 }
 .--background-color::before{
   content: '';
-  background-image: url(../img/buldog.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -198,6 +197,24 @@ h6 {
 .scrolled .header {
   --background-color: rgba(0, 0, 0, 0.8);
 }
+
+.main{
+  text-align: right;
+}
+.typed{
+  font-weight: bold;
+}
+
+.typed-fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.typed-fade.typed-fade-out {
+  opacity: 0;
+}
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
