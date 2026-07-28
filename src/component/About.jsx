@@ -79,10 +79,10 @@ const About = () => {
 			{/* About Section */}
 			<section
 				id="about"
-				className="relative border-t border-[var(--border-strong)] px-80 py-20 max-md:px-5 max-md:py-16"
+				className="w-full relative border-t border-[var(--border-strong)] py-20 max-md:py-16"
 				ref={sectionRef}
 			>
-				<div className="mx-auto w-full max-w-[1200px]">
+				<div className="mx-auto w-full max-w-[1000px] px-8 max-md:px-5">
 					<div className="fade-in">
 						<span className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[.1em] text-[var(--accent)]">
 							<User className="h-4 w-4" />
@@ -109,17 +109,17 @@ const About = () => {
 							</p>
 						</div>
 
-						<div className="fade-in fade-in-delay-2 flex flex-col gap-5 rounded-[18px] border border-[var(--border)] bg-[var(--bg-secondary)] p-8 transition hover:border-[var(--border-hover)]">
+						<div className="fade-in fade-in-delay-2 flex min-w-0 flex-col gap-5 rounded-[18px] border border-[var(--border)] bg-[var(--bg-secondary)] p-8 transition hover:border-[var(--border-hover)] max-sm:p-5">
 							{infoItems.map((item) => (
 								<div className="flex items-start gap-4" key={item.label}>
 									<div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[var(--accent-border)] bg-[var(--accent-subtle)] text-[var(--accent)]">
 										{item.icon}
 									</div>
-									<div>
+									<div className="min-w-0">
 										<div className="mb-1 text-xs font-medium uppercase tracking-[.1em] text-[var(--text-tertiary)]">
 											{item.label}
 										</div>
-										<div className="text-sm font-medium text-[var(--text-primary)]">
+										<div className="break-words text-sm font-medium text-[var(--text-primary)]">
 											{item.value}
 										</div>
 									</div>

@@ -41,10 +41,10 @@ const Skills = () => {
 	return (
 		<section
 			id="skills"
-			className="relative border-t border-[var(--border-strong)] px-5 py-24 lg:px-90 max-md:py-16"
+			className="w-full relative border-t border-[var(--border-strong)] py-24 max-md:py-16"
 			ref={sectionRef}
 		>
-			<div className="mx-auto w-full max-w-[1200px]">
+			<div className="mx-auto w-full max-w-[1000px] px-8 max-md:px-5">
 				<div className="mb-12 text-center fade-in">
 					<span className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[.1em] text-[var(--accent)]">
 						Skills
@@ -56,7 +56,7 @@ const Skills = () => {
 						Tools and frameworks I use to bring ideas to life
 					</p>
 				</div>
-				<div className="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-md:gap-3">
+				<div className="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1 max-md:gap-3">
 					{skills.map((skill, index) => (
 						<div
 							className={`fade-in fade-in-delay-${index + 1} flex cursor-default flex-col items-center gap-4 rounded-[18px] border border-[var(--border)] bg-[var(--bg-secondary)] px-6 py-8 transition hover:-translate-y-1 hover:border-[var(--accent-border)] hover:bg-[var(--bg-tertiary)] hover:shadow-[0_0_40px_rgba(59,130,246,.06)] max-md:px-4 max-md:py-6`}

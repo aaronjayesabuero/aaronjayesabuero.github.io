@@ -1,6 +1,6 @@
 const Footer = () => (
-	<footer className="border-t border-[var(--border)] py-8 px-80">
-		<div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-5 sm:px-6 lg:px-8 max-md:flex-col max-md:gap-4 max-md:text-center">
+	<footer className="w-full border-t border-[var(--border)] py-8">
+		<div className="mx-auto flex w-full max-w-[1200px] items-center justify-around px-5 sm:px-6 lg:px-8 max-md:flex-col max-md:gap-4 max-md:text-center">
 			<p className="text-sm text-[var(--text-tertiary)]">
 				© {new Date().getFullYear()}{" "}
 				<span className="font-medium text-[var(--accent)]">AJ Sabuero</span>.
