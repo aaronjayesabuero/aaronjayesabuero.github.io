@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#fff"/>
+  <circle cx="256" cy="256" r="247" fill="#000" stroke="#fff" stroke-width="8"/>
+  <circle cx="256" cy="256" r="238" fill="none" stroke="#fff" stroke-width="4"/>
+  <text x="126" y="325" fill="#fff" font-family="Georgia, 'Times New Roman', serif" font-size="250" font-weight="400">A</text>
+  <text x="273" y="367" fill="#fff" font-family="Georgia, 'Times New Roman', serif" font-size="245" font-weight="400">J</text>
+</svg>
