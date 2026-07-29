@@ -40,7 +40,6 @@ const GithubActivity = () => {
 			.then(parseResponse)
 			.catch(async (error) => {
 				if (error.name === "AbortError") throw error;
-				if (!import.meta.env.DEV) throw error;
 				const fallback = await fetch(`https://github-contributions-api.jogruber.de/v4/aaronjayesabuero?y=${year}`, { signal: controller.signal });
 				return parseResponse(fallback);
 			})
