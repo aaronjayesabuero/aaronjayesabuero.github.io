@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { Check, Github, Linkedin, Mail, ArrowRight } from "lucide-react";
-import { FaLaravel, FaWordpress } from "react-icons/fa";
-import { SiPostgresql } from "react-icons/si";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
 import hero from "../assets/img/profile2.jpg";
 import heroHover from "../assets/img/profile.png";
 
@@ -12,9 +12,9 @@ const socials = [
 ];
 
 const tech = [
-	["Laravel", FaLaravel, "text-red-500"],
-	["WordPress", FaWordpress, "text-sky-500"],
-	["PostgreSQL", SiPostgresql, "text-sky-600"],
+	["Node.js", FaNodeJs, "text-green-500"],
+	["React", FaReact, "text-sky-500"],
+	["Tailwind CSS", SiTailwindcss, "text-cyan-500"],
 ];
 
 const Hero = () => (
@@ -66,7 +66,9 @@ const Hero = () => (
 
 			<h2 className="mt-5 text-[clamp(1.25rem,3vw,2rem)] font-medium leading-tight tracking-[-.04em] text-[var(--text-primary)]">
 				Full-Stack Web Developer{" "}
-				<span className="text-[var(--text-secondary)]">— Laravel &amp; WordPress</span>
+				<span className="text-[var(--text-secondary)]">
+					— Node.js &amp; React
+				</span>
 			</h2>
 			<p className="mt-5 max-w-[950px] text-[clamp(1.1rem,2vw,1.1rem)] font-light leading-[1.65] text-[var(--text-secondary)]">
 				I&apos;m a full-stack web developer building websites and backend
@@ -80,10 +82,11 @@ const Hero = () => (
 						{name}
 					</span>
 				))}{" "}
-				with SEO experience from client work. I&apos;m currently leading
-				architecture on a pet identification system using Siamese neural
-				networks and EfficientNetV2B0, and an SMS-based order platform with LLM
-				integration (OpenAI, Laravel, Flutter).
+				with hands-on experience in designing and developing modern web
+				applications. During my On-the-Job Training (OJT) in Human-Computer
+				Interaction (HCI), I worked on user-centered design, UI/UX improvement,
+				and usability testing while contributing to the development of
+				intuitive, responsive, and accessible software solutions.
 			</p>
 			<a
 				href="#about"
