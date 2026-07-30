@@ -3,6 +3,7 @@ import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 
 const navList = [
 	{ href: "#home", label: "Home" },
+	{ href: "#projects", label: "Projects" },
 	{ href: "#about", label: "About" },
 	{ href: "#skills", label: "Skills" },
 ];
@@ -52,7 +53,7 @@ const Header = () => {
 			<div className="mx-auto flex h-16 w-full max-w-[1000px] items-center px-5 sm:px-6 lg:px-8">
 				<a
 					href="#home"
-					className="min-w-0 truncate pr-140 text-lg font-bold tracking-tight transition-opacity hover:opacity-80 max-md:pl-0 max-md:pr-0"
+					className="min-w-0 truncate pr-121 text-lg font-bold tracking-tight transition-opacity hover:opacity-80 max-md:pl-0 max-md:pr-0"
 				>
 					<span className="text-[var(--accent)]">AJ</span> Sabuero
 				</a>
