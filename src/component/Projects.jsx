@@ -123,7 +123,7 @@ const Projects = () => {
 	return (
 		<section
 			id="projects"
-			className="w-full border-t border-[var(--border-strong)] py-20 max-md:py-16"
+			className="w-full py-5 max-md:py-16"
 			ref={sectionRef}
 		>
 			<div className="mx-auto w-full max-w-[1000px] px-8 max-md:px-5">
@@ -133,9 +133,6 @@ const Projects = () => {
 							Projects
 						</h2>
 					</div>
-					<p className="max-w-[300px] text-right text-sm leading-6 text-[var(--text-secondary)] max-sm:hidden">
-						A selection of design work and systems built for real-world needs.
-					</p>
 				</div>
 				<div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
 					{projects.map((project, index) => (

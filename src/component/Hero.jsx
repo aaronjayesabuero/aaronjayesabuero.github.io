@@ -20,7 +20,7 @@ const tech = [
 const Hero = () => (
 	<main
 		id="home"
-		className="w-full min-h-screen bg-[var(--bg-primary)] py-8 text-[var(--text-primary)]"
+		className="w-full min-h-screen bg-[var(--bg-primary)] pt-8 text-[var(--text-primary)]"
 	>
 		<div className="mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-[1000px] flex-col justify-center px-8 pt-12 max-md:px-5 max-md:pt-16">
 			<div className="flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-5">

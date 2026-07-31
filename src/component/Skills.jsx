@@ -41,15 +41,12 @@ const Skills = () => {
 	return (
 		<section
 			id="skills"
-			className="w-full relative border-t border-[var(--border-strong)] py-24 max-md:py-16"
+			className="w-full relative py-8 max-md:py-16"
 			ref={sectionRef}
 		>
 			<div className="mx-auto w-full max-w-[1000px] px-8 max-md:px-5">
 				<div className="mb-12 text-center fade-in">
-					<span className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[.1em] text-[var(--accent)]">
-						Skills
-					</span>
-					<h2 className="mb-2 text-[clamp(1rem,2.1vw,2rem)] font-bold leading-[1.1] tracking-tight">
+					<h2 className="mb-2 text-[clamp(1.5rem,3vw,2rem)] font-medium leading-[1.1] tracking-tight">
 						Technologies I work with
 					</h2>
 					<p className="mx-auto max-w-[480px] text-[13px] leading-7 text-[var(--text-secondary)]">

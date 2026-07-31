@@ -1,8 +1,10 @@
 import Header from "./component/Header";
 import Hero from "./component/Hero";
 import Projects from "./component/Projects";
-import About from "./component/About";
+import Experience from "./component/Experience";
 import Skills from "./component/Skills";
+import Education from "./component/Education";
+import Certifications from "./component/Certifications";
 import GithubActivity from "./component/GithubActivity";
 import Footer from "./component/Footer";
 
@@ -12,8 +14,10 @@ const App = () => {
 			<Header />
 			<Hero />
 			<Projects />
-			<About />
+			<Experience />
 			<Skills />
+			<Education />
+			<Certifications />
 			<GithubActivity />
 			<Footer />
 		</div>

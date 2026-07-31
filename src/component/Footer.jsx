@@ -1,5 +1,5 @@
 const Footer = () => (
-	<footer className="w-full border-t border-[var(--border)] py-8">
+	<footer className="w-full py-8">
 		<div className="mx-auto flex w-full max-w-[1200px] items-center justify-around px-5 sm:px-6 lg:px-8 max-md:flex-col max-md:gap-4 max-md:text-center">
 			<p className="text-sm text-[var(--text-tertiary)]">
 				© {new Date().getFullYear()}{" "}

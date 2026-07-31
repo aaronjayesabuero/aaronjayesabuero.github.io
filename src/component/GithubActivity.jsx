@@ -86,7 +86,7 @@ const GithubActivity = () => {
 	return (
 		<section
 			id="github-activity"
-			className="w-full border-t border-[var(--border-strong)] py-20 max-md:py-16"
+			className="w-full py-20 max-md:py-16"
 		>
 			<div className="mx-auto w-full max-w-[1000px] px-8 max-md:px-5">
 				<div className="mb-6 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start">
