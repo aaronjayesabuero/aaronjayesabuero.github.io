@@ -1,4 +1,4 @@
-import { createElement, useEffect, useRef } from "react";
+import { createElement, useEffect, useRef, useState } from "react";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { FaCss3Alt, FaHtml5, FaJsSquare, FaLaravel } from "react-icons/fa";
 import {
@@ -102,7 +102,31 @@ const ProjectIcons = ({ project }) => (
 	</div>
 );
 
-const Projects = () => {
+const ProjectPagination = () => {
+	const [currentPage, setCurrentPage] = useState(1);
+	const pages = [1, 2];
+
+	return (
+		<div className="mt-12 flex items-center border-y border-dashed border-[var(--border-strong)] py-8">
+			<div className="mx-auto flex items-center justify-center gap-2">
+				{pages.map((page) => (
+					<button
+						type="button"
+						key={page}
+						onClick={() => setCurrentPage(page)}
+						aria-label={`Go to project page ${page}`}
+						aria-current={currentPage === page ? "page" : undefined}
+						className={`flex h-10 w-10 items-center justify-center rounded-lg border text-sm transition ${currentPage === page ? "border-[var(--text-primary)] bg-[var(--text-primary)] text-[var(--bg-primary)]" : "border-dashed border-[var(--border-strong)] text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--text-primary)]"}`}
+					>
+						{page}
+					</button>
+				))}
+			</div>
+		</div>
+	);
+};
+
+const Projects = ({ compact = false, onViewAll }) => {
 	const sectionRef = useRef(null);
 
 	useEffect(() => {
@@ -127,13 +151,13 @@ const Projects = () => {
 			ref={sectionRef}
 		>
 			<div className="mx-auto w-full max-w-[1000px] px-8 max-md:px-5">
-				<div className="fade-in mb-8 flex items-end justify-between gap-5">
-					<div>
+				{!compact && (
+					<div className="fade-in mb-8 flex items-end justify-between gap-5">
 						<h2 className="text-[clamp(1.5rem,3vw,2rem)] font-medium tracking-[-.04em]">
 							Projects
 						</h2>
 					</div>
-				</div>
+				)}
 				<div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
 					{projects.map((project, index) => (
 						<article
@@ -173,16 +197,16 @@ const Projects = () => {
 						</article>
 					))}
 				</div>
-				<div className="mt-7 flex justify-center">
-					<a
-						href={githubProfile}
-						target="_blank"
-						rel="noreferrer"
+				{compact && <ProjectPagination />}
+				{!compact && <div className="mt-7 flex justify-center">
+					<button
+						type="button"
+						onClick={onViewAll}
 						className="inline-flex items-center gap-2 rounded-lg bg-[var(--text-primary)] px-5 py-2.5 text-sm font-medium !text-[var(--bg-primary)] transition hover:opacity-80"
 					>
 						View all Projects <ExternalLink size={15} />
-					</a>
-				</div>
+					</button>
+				</div>}
 			</div>
 		</section>
 	);

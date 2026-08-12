@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 
 const navList = [
-	{ href: "#home", label: "Home" },
-	{ href: "#projects", label: "Projects" },
-	{ href: "#experience", label: "Experience" },
-	{ href: "#skills", label: "Skills" },
-	{ href: "#education", label: "Education" },
-	{ href: "#certifications", label: "Certifications" },
+	{ view: "projects", label: "Projects" },
+	{ view: "experience", label: "Experience" },
+	{ view: "events", label: "Events" },
 ];
 
 const iconButton =
 	"flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-transparent text-[var(--text-secondary)] transition hover:border-[var(--border-hover)] hover:bg-[var(--hover-bg)] hover:text-[var(--text-primary)]";
 
-const Header = () => {
+const Header = ({ onNavigate, onHome }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	const [theme, setTheme] = useState(
@@ -48,26 +45,33 @@ const Header = () => {
 		</button>
 	);
 
+	const openView = (view) => {
+		onNavigate(view);
+		setIsMenuOpen(false);
+	};
+
 	return (
 		<header
 			className={`fixed inset-x-0 top-0 z-50 border-b bg-[var(--nav-bg)] backdrop-blur-xl transition ${scrolled ? "border-[var(--border)]" : "border-transparent"}`}
 		>
 			<div className="mx-auto flex h-16 w-full max-w-[1000px] items-center px-5 sm:px-6 lg:px-8">
-				<a
-					href="#home"
-					className="min-w-0 truncate pr-80 text-lg font-bold tracking-tight transition-opacity hover:opacity-80 max-md:pl-0 max-md:pr-0"
+				<button
+					type="button"
+					onClick={onHome}
+					className="min-w-0 truncate text-left text-lg font-bold tracking-tight transition-opacity hover:opacity-80"
 				>
 					<span className="text-[var(--accent)]">AJ</span> Sabuero
-				</a>
-				<nav className="hidden items-center gap-1 md:flex">
+				</button>
+				<nav className="ml-auto hidden items-center gap-1 md:flex">
 					{navList.map((link) => (
-						<a
-							href={link.href}
-							key={link.href}
+						<button
+							type="button"
+							key={link.view}
+							onClick={() => openView(link.view)}
 							className="rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-secondary)] transition hover:bg-[var(--hover-bg)] hover:text-[var(--text-primary)]"
 						>
 							{link.label}
-						</a>
+						</button>
 					))}
 				</nav>
 				<p className="hidden text-[var(--text-tertiary)] md:block">|</p>
@@ -89,22 +93,15 @@ const Header = () => {
 			{isMenuOpen && (
 				<div className="absolute inset-x-0 top-16 flex animate-[menu-slide-in_.2s_ease-out] flex-col gap-1 border-b border-[var(--border)] bg-[var(--nav-mobile-bg)] p-4 backdrop-blur-xl md:hidden">
 					{navList.map((link) => (
-						<a
-							href={link.href}
-							key={link.href}
-							onClick={() => setIsMenuOpen(false)}
-							className="rounded-lg px-4 py-3 font-medium text-[var(--text-secondary)] hover:bg-[var(--hover-bg)] hover:text-[var(--text-primary)]"
+						<button
+							type="button"
+							key={link.view}
+							onClick={() => openView(link.view)}
+							className="rounded-lg px-4 py-3 text-left font-medium text-[var(--text-secondary)] hover:bg-[var(--hover-bg)] hover:text-[var(--text-primary)]"
 						>
 							{link.label}
-						</a>
+						</button>
 					))}
-					<a
-						href="mailto:aaronjayesabuero@gmail.com"
-						onClick={() => setIsMenuOpen(false)}
-						className="rounded-lg px-4 py-3 font-medium text-[var(--accent)]"
-					>
-						Contact →
-					</a>
 				</div>
 			)}
 		</header>
